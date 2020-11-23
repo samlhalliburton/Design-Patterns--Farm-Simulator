@@ -1,7 +1,5 @@
 package main.java;
 
-import main.java.Factory.Farm;
-
 import java.util.Scanner;
 
 public class Main {
@@ -27,8 +25,6 @@ public class Main {
 
     setValueGreaterThanZero(input);
     System.out.println("Is input greater than zero? " + output);
-
-    Farm farmer1 = new Farm("Jim", 1);
 
   }
 
