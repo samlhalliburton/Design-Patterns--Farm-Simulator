@@ -1,11 +1,11 @@
 package main.java.Factory;
 
-public class AnimalFarmFactory extends FarmFactory {
+public class CropFarmFactory extends FarmFactory {
 
   @Override
   public Farm createNewFarm() {
 
-    return new AnimalFarm();
+    return new CropFarm();
 
   }
 
