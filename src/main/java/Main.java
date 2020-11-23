@@ -1,6 +1,10 @@
+package main.java;
+
+import main.java.Factory.Farm;
+
 import java.util.Scanner;
 
-public class HelloWorld {
+public class Main {
 
   static boolean output;
 
@@ -23,6 +27,8 @@ public class HelloWorld {
 
     setValueGreaterThanZero(input);
     System.out.println("Is input greater than zero? " + output);
+
+    Farm farmer1 = new Farm("Jim", 1);
 
   }
 

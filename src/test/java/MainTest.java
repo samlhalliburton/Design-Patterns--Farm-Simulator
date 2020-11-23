@@ -1,7 +1,7 @@
 /**
- * HelloWorldTest.java
+ * MainTest.java
  *
- * Tests for HelloWorld.java
+ * Tests for Main.java
  *
  * @author Samantha Halliburton
  * @version 1.0.0
@@ -14,7 +14,7 @@ import org.junit.Test;
 /**
  * This test class tests the HelloWorld class.
  */
-public class HelloWorldTest {
+public class MainTest {
 
   /**
    * This is a test of the constructor of the Resource class.
