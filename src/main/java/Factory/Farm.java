@@ -1,7 +1,10 @@
 package main.java.Factory;
 
+/*
+ * Common interface for all farms.
+ */
 public interface Farm {
 
-  public void createFarm();
+  void createFarm();
 
 }
