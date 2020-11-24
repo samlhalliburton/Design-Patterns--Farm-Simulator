@@ -47,6 +47,7 @@ public class Main {
     //Testing Farm Factory (Factory Design Pattern)
     configureFarm("Animal");
     runFarm();
+    farmFactory.printCurrentDay();
 
     configureFarm("Crop");
     runFarm();

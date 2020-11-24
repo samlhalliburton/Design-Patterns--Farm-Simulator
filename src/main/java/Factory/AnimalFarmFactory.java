@@ -5,11 +5,14 @@ package main.java.Factory;
  */
 public class AnimalFarmFactory extends FarmFactory {
 
+  int totalCycles = 0;
+  int days = 1;
+  int nights = 0;
+
   @Override
   public Farm createNewFarm() {
 
     AnimalFarm animalFarm = new AnimalFarm();
-    animalFarm.setTotalCycles();
     return animalFarm;
 
   }
