@@ -48,6 +48,9 @@ public class Main {
     configureFarm("Animal");
     runFarm();
     farmFactory.printCurrentDay();
+    farmFactory.nextNight();
+    farmFactory.nextDay();
+
 
     configureFarm("Crop");
     runFarm();

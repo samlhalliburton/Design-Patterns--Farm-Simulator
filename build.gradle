@@ -7,7 +7,7 @@ apply plugin: 'application'
 apply plugin: 'jacoco'
 
 
-mainClassName = 'main.java.HelloWorld'
+mainClassName = 'main.java.Main'
 
 
 // In this section you declare where to find the dependencies of your project
