@@ -8,7 +8,9 @@ public class AnimalFarmFactory extends FarmFactory {
   @Override
   public Farm createNewFarm() {
 
-    return new AnimalFarm();
+    AnimalFarm animalFarm = new AnimalFarm();
+    animalFarm.setTotalCycles();
+    return animalFarm;
 
   }
 
