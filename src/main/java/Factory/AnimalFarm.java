@@ -1,3 +1,12 @@
+/**
+ * AnimalFarm.java
+ *
+ * Animal Farm implementation of Farm interface.
+ *
+ * @author Samantha Halliburton
+ * @version 1.0.0
+ */
+
 package main.java.Factory;
 
 /*

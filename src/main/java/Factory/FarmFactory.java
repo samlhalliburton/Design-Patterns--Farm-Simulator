@@ -1,3 +1,12 @@
+/**
+ * FarmFactory.java
+ *
+ * Farm Factory abstract class for creation of all farms and their methods.
+ *
+ * @author Samantha Halliburton
+ * @version 1.0.0
+ */
+
 package main.java.Factory;
 
 /*
@@ -22,13 +31,17 @@ public abstract class FarmFactory {
   }
 
   public void nextDay() {
-    days += 1;
-    System.out.println("Day " + days + ": It is now daytime.");
+    if(nights == days) {
+      days += 1;
+      System.out.println("Day " + days + ": It is now daytime.");
+    } else return;
   }
 
   public void nextNight() {
-    nights += 1;
-    System.out.println("Night " + nights + ": It is now nighttime.");
+    if((days - nights) == 1) {
+      nights += 1;
+      System.out.println("Night " + nights + ": It is now nighttime.");
+    } else if ((days - nights) != 1) return;
   }
 
   public void setTotalCycles() {

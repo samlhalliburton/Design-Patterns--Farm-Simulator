@@ -32,6 +32,7 @@ public class Main {
 
   static void runFarm() {
     farmFactory.constructFarm();
+    farmFactory.printCurrentDay();
   }
 
   public static void main(String[] args) {
@@ -47,8 +48,9 @@ public class Main {
     //Testing Farm Factory (Factory Design Pattern)
     configureFarm("Animal");
     runFarm();
-    farmFactory.printCurrentDay();
     farmFactory.nextNight();
+    farmFactory.nextNight();
+    farmFactory.nextDay();
     farmFactory.nextDay();
 
 

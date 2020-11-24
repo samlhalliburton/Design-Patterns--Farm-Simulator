@@ -1,5 +1,13 @@
-package main.java.Factory;
+/**
+ * CropFarm.java
+ *
+ * Crop Farm implementation of Farm interface.
+ *
+ * @author Samantha Halliburton
+ * @version 1.0.0
+ */
 
+package main.java.Factory;
 
 /*
  * Crop Farm implementation.
