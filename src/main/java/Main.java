@@ -45,20 +45,26 @@ public class Main {
 //    setValueGreaterThanZero(input);
 //    System.out.println("Is input greater than zero? " + output);
 
-    //Testing Farm Factory (Factory Design Pattern)
+    //Testing Farm Factory (Factory Design Pattern) by creating Animal Farm
     configureFarm("Animal");
     runFarm();
     farmFactory.nextNight();
     farmFactory.nextNight();
     farmFactory.nextDay();
     farmFactory.nextDay();
+    System.out.println(farmFactory.getTotalCycles());
+    System.out.println();
 
-
+    //Testing Farm Factory (Factory Design Pattern) by creating Crop Farm
     configureFarm("Crop");
     runFarm();
+    System.out.println();
 
+    //Testing Farm Factory (Factory Design Pattern) by creating Hybrid Farm
     configureFarm("Hybrid");
     runFarm();
+    System.out.println(farmFactory.getTotalCycles());
+    System.out.println();
   }
 
 }

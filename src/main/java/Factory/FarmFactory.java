@@ -48,12 +48,14 @@ public abstract class FarmFactory {
     this.totalCycles = 0;
   }
 
-  public void getTotalCycles() {
+  public int getTotalCycles() {
     if(nights == days) {
       totalCycles = nights;
     } else if (nights != days) {
       totalCycles = days;
     }
+
+    return totalCycles;
   }
 
 }
