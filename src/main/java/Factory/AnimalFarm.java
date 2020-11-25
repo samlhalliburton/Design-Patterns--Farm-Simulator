@@ -1,6 +1,6 @@
 /**
  * AnimalFarm.java
- *
+ * <p>
  * Animal Farm implementation of Farm interface.
  *
  * @author Samantha Halliburton
@@ -12,11 +12,11 @@ package main.java.Factory;
 /*
  * Animal Farm implementation.
  */
-public class AnimalFarm implements Farm{
+public class AnimalFarm implements Farm {
 
-  @Override
-  public void createFarm() {
-    System.out.println("An animal farm was created.");
-  }
+    @Override
+    public void createFarm() {
+        System.out.println("An animal farm was created.");
+    }
 
 }

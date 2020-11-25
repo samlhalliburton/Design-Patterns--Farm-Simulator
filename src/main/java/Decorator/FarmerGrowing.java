@@ -1,6 +1,6 @@
 package main.java.Decorator;
 
-public class FarmerGrowing extends FarmerDecorator{
+public class FarmerGrowing extends FarmerDecorator {
 
   public FarmerGrowing(Farmer farmer) {
     super(farmer);

@@ -1,6 +1,6 @@
 /**
  * CropFarmFactory.java
- *
+ * <p>
  * Crop Farm Factory abstract class for creation of all crop farms and their methods.
  *
  * @author Samantha Halliburton
@@ -14,11 +14,11 @@ package main.java.Factory;
  */
 public class CropFarmFactory extends FarmFactory {
 
-  @Override
-  public Farm createNewFarm() {
+    @Override
+    public Farm createNewFarm() {
 
-    return new CropFarm();
+        return new CropFarm();
 
-  }
+    }
 
 }

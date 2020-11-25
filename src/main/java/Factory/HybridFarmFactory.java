@@ -1,6 +1,6 @@
 /**
  * HybridFarmFactory.java
- *
+ * <p>
  * Hybrid Farm Factory abstract class for creation of all hybrid farms and their methods.
  *
  * @author Samantha Halliburton
@@ -12,13 +12,13 @@ package main.java.Factory;
 /*
  * Hybrid Farm Factory will produce Hybrid Farms.
  */
-public class HybridFarmFactory extends FarmFactory{
+public class HybridFarmFactory extends FarmFactory {
 
-  @Override
-  public Farm createNewFarm() {
+    @Override
+    public Farm createNewFarm() {
 
-    return new HybridFarm();
+        return new HybridFarm();
 
-  }
+    }
 
 }

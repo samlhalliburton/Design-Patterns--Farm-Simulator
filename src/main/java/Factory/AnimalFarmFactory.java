@@ -1,6 +1,6 @@
 /**
  * AnimalFarmFactory.java
- *
+ * <p>
  * Animal Farm Factory abstract class for creation of all animal farms and their methods.
  *
  * @author Samantha Halliburton
@@ -14,12 +14,12 @@ package main.java.Factory;
  */
 public class AnimalFarmFactory extends FarmFactory {
 
-  @Override
-  public Farm createNewFarm() {
+    @Override
+    public Farm createNewFarm() {
 
-    AnimalFarm animalFarm = new AnimalFarm();
-    return animalFarm;
+        AnimalFarm animalFarm = new AnimalFarm();
+        return animalFarm;
 
-  }
+    }
 
 }

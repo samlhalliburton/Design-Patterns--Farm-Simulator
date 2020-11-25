@@ -1,6 +1,6 @@
 /**
  * Farm.java
- *
+ * <p>
  * Farm interface for all farms to implement.
  *
  * @author Samantha Halliburton
@@ -14,6 +14,6 @@ package main.java.Factory;
  */
 public interface Farm {
 
-  void createFarm();
+    void createFarm();
 
 }

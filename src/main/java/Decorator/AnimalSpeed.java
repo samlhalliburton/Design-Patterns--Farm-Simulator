@@ -1,17 +1,17 @@
 package main.java.Decorator;
 
-public class AnimalSpeed extends AnimalDecorator{
+public class AnimalSpeed extends AnimalDecorator {
 
-  public AnimalSpeed(Animal animal) {
-    super(animal);
-  }
+    public AnimalSpeed(Animal animal) {
+        super(animal);
+    }
 
-  public String decorate() {
-    return super.decorate() + decorateWithSpeed();
-  }
+    public String decorate() {
+        return super.decorate() + decorateWithSpeed();
+    }
 
-  private String decorateWithSpeed() {
-    return " and has an affinity for speed.";
-  }
+    private String decorateWithSpeed() {
+        return " and has an affinity for speed.";
+    }
 
 }
