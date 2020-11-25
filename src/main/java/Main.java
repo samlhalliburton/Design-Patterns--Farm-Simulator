@@ -26,18 +26,6 @@ import main.java.Factory.HybridFarmFactory;
 
 public class Main {
     private static FarmFactory farmFactory;
-    static boolean output;
-    String farmType;
-
-    static void setValueGreaterThanZero(int x) {
-        if (x > 0) {
-            output = true;
-        } else if (x <= 0) {
-            output = false;
-        } else if (x == 0) {
-            output = false;
-        }
-    }
 
     static void configureFarm(String farmType) {
         if (farmType.equals("Animal")) {
