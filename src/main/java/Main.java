@@ -1,3 +1,12 @@
+/**
+ * Main.java
+ *
+ * Main class for running the farm simulation via the main method.
+ *
+ * @author Samantha Halliburton
+ * @version 1.0.0
+ */
+
 package main.java;
 
 import main.java.Factory.AnimalFarmFactory;

@@ -1,3 +1,12 @@
+/**
+ * FarmerAffinity.java
+ *
+ * FarmerAffinity class implements Affinity interface.
+ *
+ * @author Samantha Halliburton
+ * @version 1.0.0
+ */
+
 package main.java.Decorator;
 
 public class FarmerAffinity implements Affinity{

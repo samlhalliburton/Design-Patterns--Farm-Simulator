@@ -1,10 +1,21 @@
+/**
+ * AnimalAffinity.java
+ *
+ * AnimalAffinity class implements Affinity interface.
+ *
+ * @author Samantha Halliburton
+ * @version 1.0.0
+ */
+
 package main.java.Decorator;
+
+import main.java.Factory.Animal;
 
 public class AnimalAffinity implements Affinity{
 
   private String name;
 
-  public AnimalAffinity(String name) {
+  public AnimalAffinity(Animal animal, String name) {
     this.name = name;
   }
 
