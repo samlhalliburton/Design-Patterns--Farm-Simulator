@@ -55,8 +55,8 @@ public class Main {
     }
 
     /**
-     * Main method
-     * @param args
+     * Main method.
+     * @param args arguments
      */
     public static void main(String[] args) {
         //Testing Farm Factory (Factory Design Pattern) by creating Animal Farm
