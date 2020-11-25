@@ -9,6 +9,8 @@
 
 package main.java;
 
+import main.java.Decorator.Animal;
+import main.java.Decorator.AnimalAffinity;
 import main.java.Factory.AnimalFarmFactory;
 import main.java.Factory.CropFarmFactory;
 import main.java.Factory.FarmFactory;
@@ -74,6 +76,10 @@ public class Main {
     runFarm();
     System.out.println(farmFactory.getTotalCycles());
     System.out.println();
+
+    Animal cow = new Animal("cow", 10, 0, "milk");
+    AnimalAffinity production = new AnimalAffinity(cow, "production");
+    production.setAffinity("production");
   }
 
 }

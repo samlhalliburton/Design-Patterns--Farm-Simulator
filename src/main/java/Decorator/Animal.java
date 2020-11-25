@@ -12,6 +12,7 @@ public class Animal {
     this.size = size;
     this.age = age;
     this.product = product;
+    System.out.println("A " + species + " was added to the farm");
   }
 
   public String getSpecies() {

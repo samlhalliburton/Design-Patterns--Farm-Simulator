@@ -11,6 +11,7 @@ package main.java.Decorator;
 
 public class FarmerAffinity implements Affinity{
 
+
   private String name;
 
   public FarmerAffinity(String name) {

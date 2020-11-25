@@ -1,7 +1,7 @@
 /**
- * AnimalAffinity.java
+ * AffinityDecorator.java
  *
- * AnimalAffinity class implements Affinity interface.
+ * AffinityDecorator implements Affinity interface for creation of affinities.
  *
  * @author Samantha Halliburton
  * @version 1.0.0
@@ -9,14 +9,15 @@
 
 package main.java.Decorator;
 
-public class AnimalAffinity{
+public class AffinityDecorator implements Affinity{
 
-  private String name;
+  private Affinity wrappee;
 
-  public AnimalAffinity(Animal animal, String name) {
-    this.name = name;
+  public AffinityDecorator(Affinity wrappee) {
+    this.wrappee = wrappee;
   }
 
+  @Override
   public void setAffinity(String type) {
     if (type.equals("Production") || type.equals("production") || type.equals("PRODUCTION")) {
       System.out.println("Has an affinity for production.");
@@ -28,4 +29,5 @@ public class AnimalAffinity{
       System.out.println("Has no affinity.");
     }
   }
+
 }
