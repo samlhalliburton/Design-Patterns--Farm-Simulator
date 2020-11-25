@@ -54,6 +54,10 @@ public class Main {
         farmFactory.printCurrentDay();
     }
 
+    /**
+     * Main method
+     * @param args
+     */
     public static void main(String[] args) {
         //Testing Farm Factory (Factory Design Pattern) by creating Animal Farm
         configureFarm("Animal");
