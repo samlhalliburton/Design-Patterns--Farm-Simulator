@@ -1,6 +1,6 @@
 /**
  * MainTest.java
- *
+ * <p>
  * Tests for Main.java
  *
  * @author Samantha Halliburton
@@ -16,14 +16,14 @@ import org.junit.Test;
  */
 public class MainTest {
 
-  /**
-   * This is a test of the constructor of the Resource class.
-   * It tests to ensure that the objects created using the constructor
-   * do not return as null.
-   */
-  @Test
-  public void testSetValueGreaterThanZero() {
-    int x = 0;
-  }
+    /**
+     * This is a test of the constructor of the Resource class.
+     * It tests to ensure that the objects created using the constructor
+     * do not return as null.
+     */
+    @Test
+    public void testSetValueGreaterThanZero() {
+        int x = 0;
+    }
 
 }
