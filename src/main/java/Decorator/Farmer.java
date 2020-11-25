@@ -1,6 +1,6 @@
 package main.java.Decorator;
 
-public interface Animal {
+public interface Farmer {
 
   String decorate();
 

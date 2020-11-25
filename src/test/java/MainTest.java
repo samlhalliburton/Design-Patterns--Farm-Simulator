@@ -12,7 +12,7 @@ package test.java;
 import org.junit.Test;
 
 /**
- * This test class tests the HelloWorld class.
+ * This test class tests the Main class.
  */
 public class MainTest {
 

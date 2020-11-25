@@ -9,8 +9,7 @@
 
 package main.java;
 
-import main.java.Decorator.Animal;
-import main.java.Decorator.AnimalAffinity;
+import main.java.Decorator.*;
 import main.java.Factory.AnimalFarmFactory;
 import main.java.Factory.CropFarmFactory;
 import main.java.Factory.FarmFactory;
@@ -47,23 +46,12 @@ public class Main {
   }
 
   public static void main(String[] args) {
-//    Scanner scanner = new Scanner(System.in);
-//
-//    System.out.println("Hello World!");
-//    System.out.println("Enter a number to test:");
-//    int input = scanner.nextInt();
-//
-//    setValueGreaterThanZero(input);
-//    System.out.println("Is input greater than zero? " + output);
-
     //Testing Farm Factory (Factory Design Pattern) by creating Animal Farm
     configureFarm("Animal");
     runFarm();
     farmFactory.nextNight();
-    farmFactory.nextNight();
     farmFactory.nextDay();
-    farmFactory.nextDay();
-    System.out.println(farmFactory.getTotalCycles());
+    System.out.println("Total number of full days: " + farmFactory.getTotalCycles());
     System.out.println();
 
     //Testing Farm Factory (Factory Design Pattern) by creating Crop Farm
@@ -74,12 +62,41 @@ public class Main {
     //Testing Farm Factory (Factory Design Pattern) by creating Hybrid Farm
     configureFarm("Hybrid");
     runFarm();
-    System.out.println(farmFactory.getTotalCycles());
+    farmFactory.nextNight();
+    farmFactory.nextDay();
+    farmFactory.nextNight();
+    System.out.println("Total number of full days: " + farmFactory.getTotalCycles());
     System.out.println();
 
-    Animal cow = new Animal("cow", 10, 0, "milk");
-    AnimalAffinity production = new AnimalAffinity(cow, "production");
-    production.setAffinity("production");
+    //Testing Decorator Pattern with Farmer Rearing Affinity
+    Farmer farmer1 = new FarmerRearing(new FarmerImpl());
+    System.out.println(farmer1.decorate());
+    //System.out.println();
+
+    //Testing Decorator Pattern with Farmer Growing Affinity
+    Farmer farmer2 = new FarmerGrowing(new FarmerImpl());
+    System.out.println(farmer2.decorate());
+    //System.out.println();
+
+    //Testing Decorator Pattern with Farmer Money-Making Affinity
+    Farmer farmer3 = new FarmerMoney(new FarmerImpl());
+    System.out.println(farmer3.decorate());
+    System.out.println();
+
+    //Testing Decorator Pattern with Animal Production Affinity
+    Animal cow = new AnimalProduction(new AnimalImpl());
+    System.out.println(cow.decorate());
+    //System.out.println();
+
+    //Testing Decorator Pattern with Animal Speed Affinity
+    Animal horse = new AnimalSpeed(new AnimalImpl());
+    System.out.println(horse.decorate());
+    //System.out.println();
+
+    //Testing Decorator Pattern with Animal Size Affinity
+    Animal sheep = new AnimalSize(new AnimalImpl());
+    System.out.println(sheep.decorate());
+    System.out.println();
   }
 
 }
