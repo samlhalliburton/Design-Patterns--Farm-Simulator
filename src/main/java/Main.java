@@ -67,11 +67,15 @@ public class Main {
         Predator mole = new Predator("Mole", false, false, farmFactory);
         System.out.println(mole.damage());
         System.out.println("Total number of full days: " + farmFactory.getTotalCycles()); // output should be 3
+
+        System.out.println(farmFactory.getTotalCurrency());
         System.out.println();
 
         //Testing Farm Factory (Factory Design Pattern) by creating Crop Farm
         configureFarm("Crop");
         runFarm();
+
+        System.out.println(farmFactory.getTotalCurrency());
         System.out.println();
 
         //Testing Farm Factory (Factory Design Pattern) by creating Hybrid Farm
@@ -100,6 +104,7 @@ public class Main {
         //Testing Decorator Pattern with Animal Production Affinity
         Animal cow = new AnimalProduction(new AnimalImpl());
         System.out.println(cow.decorate());
+        farmFactory.productionCurrency(cow);
 
         //Testing Decorator Pattern with Animal Speed Affinity
         Animal horse = new AnimalSpeed(new AnimalImpl());
@@ -109,6 +114,7 @@ public class Main {
         Animal sheep = new AnimalSize(new AnimalImpl());
         System.out.println(sheep.decorate());
         System.out.println();
+        System.out.println(farmFactory.getTotalCurrency());
 
     }
 

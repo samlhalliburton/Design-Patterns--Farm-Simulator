@@ -9,6 +9,9 @@
 
 package main.java.Factory;
 
+import main.java.Decorator.Animal;
+import main.java.Decorator.Farmer;
+
 /**
  * Base factory class for farms.
  */
@@ -19,6 +22,8 @@ public abstract class FarmFactory {
     int nights = 0;
     boolean night = false;
     int totalCurrency = 0;
+    Animal animal;
+    Farmer farmer;
 
     /**
      * constructFarm()
@@ -92,4 +97,51 @@ public abstract class FarmFactory {
         return night;
     }
 
+    /**
+     * getTotalCurrency()
+     * Returns totalCurrency.
+     * @return int totalCurrency
+     */
+    public int getTotalCurrency() {
+        return totalCurrency;
+    }
+
+    /**
+     * productionCurrency()
+     * Adds to totalCurrency of the farm.
+     * @param animal Animal
+     */
+    public int productionCurrency(Animal animal) {
+        if(animal.decorate().equals("An animal was created and has an affinity for production.")) {
+            return totalCurrency += 200;
+        } else {
+            return totalCurrency;
+        }
+    }
+
+    /**
+     * speedCurrency()
+     * Adds to totalCurrency of the farm.
+     * @param animal Animal
+     */
+    public int speedCurrency(Animal animal) {
+        if(animal.decorate().equals("An animal was created and has an affinity for speed.")) {
+            return totalCurrency += 150;
+        } else {
+            return totalCurrency;
+        }
+    }
+
+    /**
+     * sizeCurrency()
+     * Adds to totalCurrency of the farm.
+     * @param animal Animal
+     */
+    public int sizeCurrency(Animal animal) {
+        if(animal.decorate().equals("An animal was created and has an affinity for size.")) {
+            return totalCurrency += 100;
+        } else {
+            return totalCurrency;
+        }
+    }
 }
