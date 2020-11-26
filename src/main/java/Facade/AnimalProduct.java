@@ -21,9 +21,9 @@ public class AnimalProduct {
     public String harvestAnimalProduct() {
         if (harvestTime % 2 == 0) {
             harvestTime = 0;
-            return "The crop " + name + " can be harvested now.";
+            return "The animal product " + name + " can be harvested now.";
         } else {
-            return "The crop " + name + " is not ready to be harvested.";
+            return "The animal product " + name + " is not ready to be harvested.";
         }
     }
 

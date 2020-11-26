@@ -29,7 +29,7 @@ public abstract class FarmFactory {
     public void constructFarm() {
 
         Farm newFarm = createNewFarm();
-        newFarm.createFarm();
+        System.out.println(newFarm.createFarm());
     }
 
     public abstract Farm createNewFarm();
