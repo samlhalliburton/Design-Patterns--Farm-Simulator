@@ -1,24 +1,13 @@
-/**
- * Main.java
- * Main class for running the farm simulation via the main method.
- *
- * @author Samantha Halliburton
- * @version 1.0.0
- */
-
-package main.java;
+package main.java.Facade;
 
 import main.java.Decorator.*;
-import main.java.Facade.AnimalProduct;
-import main.java.Facade.Bank;
-import main.java.Facade.Predator;
 import main.java.Factory.AnimalFarmFactory;
 import main.java.Factory.CropFarmFactory;
 import main.java.Factory.FarmFactory;
 import main.java.Factory.HybridFarmFactory;
 
-public class Main {
-    //static FarmFacade facade;
+public class FarmFacade {
+
     private static FarmFactory farmFactory;
 
     static void configureFarm(String farmType) {
@@ -36,13 +25,7 @@ public class Main {
         farmFactory.printCurrentDay();
     }
 
-    /**
-     * Main method.
-     * @param args arguments
-     */
-    public static void main(String[] args) {
-        //facade.farmFacade();
-
+    public void farmFacade() {
         //Testing Farm Factory (Factory Design Pattern) by creating Animal Farm
         configureFarm("Animal");
         runFarm();
@@ -140,5 +123,4 @@ public class Main {
         System.out.println("The farm has gained $" + farmFactory.getTotalCurrency());
         System.out.println();
     }
-
 }
