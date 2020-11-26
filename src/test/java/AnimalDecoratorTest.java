@@ -13,18 +13,21 @@ public class AnimalDecoratorTest {
     @Test
     public void testDecoratorProduction() {
         Animal animal = new AnimalProduction(new AnimalImpl());
-        Assert.assertEquals(animal.decorate(), "An animal was created and has an affinity for production.");
+        Assert.assertEquals(animal.decorate(),
+                "An animal was created and has an affinity for production.");
     }
 
     @Test
-    public void testDecoratorSpeed () {
+    public void testDecoratorSpeed() {
         Animal animal = new AnimalSpeed(new AnimalImpl());
-        Assert.assertEquals(animal.decorate(), "An animal was created and has an affinity for speed.");
+        Assert.assertEquals(animal.decorate(),
+                "An animal was created and has an affinity for speed.");
     }
 
     @Test
     public void testDecoratorSize() {
         Animal animal = new AnimalSize(new AnimalImpl());
-        Assert.assertEquals(animal.decorate(), "An animal was created and has an affinity for size.");
+        Assert.assertEquals(animal.decorate(),
+                "An animal was created and has an affinity for size.");
     }
 }

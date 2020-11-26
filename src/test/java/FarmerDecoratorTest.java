@@ -13,18 +13,21 @@ public class FarmerDecoratorTest {
     @Test
     public void testDecoratorRearing() {
         Farmer farmer = new FarmerRearing(new FarmerImpl());
-        Assert.assertEquals(farmer.decorate(), "A farmer was created and has an affinity for rearing.");
+        Assert.assertEquals(farmer.decorate(),
+                "A farmer was created and has an affinity for rearing.");
     }
 
     @Test
-    public void testDecoratorGrowing () {
+    public void testDecoratorGrowing() {
         Farmer farmer = new FarmerGrowing(new FarmerImpl());
-        Assert.assertEquals(farmer.decorate(), "A farmer was created and has an affinity for growing.");
+        Assert.assertEquals(farmer.decorate(),
+                "A farmer was created and has an affinity for growing.");
     }
 
     @Test
     public void testDecoratorMoneyMaking() {
         Farmer farmer = new FarmerMoney(new FarmerImpl());
-        Assert.assertEquals(farmer.decorate(), "A farmer was created and has an affinity for money-making.");
+        Assert.assertEquals(farmer.decorate(),
+                "A farmer was created and has an affinity for money-making.");
     }
 }

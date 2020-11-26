@@ -43,7 +43,7 @@ public class FarmFactoryTest {
     }
 
     @Test
-    public void testCropFactory () {
+    public void testCropFactory() {
         configureFarm("Crop");
         runFarm();
         Assert.assertNotEquals(farmFactory.createNewFarm(), "A crop farm was created.");
