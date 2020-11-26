@@ -8,17 +8,8 @@
 
 package main.java;
 
-import main.java.Decorator.Animal;
-import main.java.Decorator.AnimalImpl;
-import main.java.Decorator.AnimalProduction;
-import main.java.Decorator.AnimalSize;
-import main.java.Decorator.AnimalSpeed;
-import main.java.Decorator.Crop;
-import main.java.Decorator.Farmer;
-import main.java.Decorator.FarmerGrowing;
-import main.java.Decorator.FarmerImpl;
-import main.java.Decorator.FarmerMoney;
-import main.java.Decorator.FarmerRearing;
+import main.java.Decorator.*;
+import main.java.Facade.Bank;
 import main.java.Facade.Predator;
 import main.java.Factory.AnimalFarmFactory;
 import main.java.Factory.CropFarmFactory;
@@ -87,16 +78,20 @@ public class Main {
         //Testing Farm Factory (Factory Design Pattern) by creating Hybrid Farm
         configureFarm("Hybrid");
         runFarm();
+        Bank bank = new Bank(farmFactory);
+        System.out.println("The farm has earned $" + bank.addToFarmCurrency() + " for the day.");
 
         //Testing crop
         Crop corn = new Crop("Corn");
         farmFactory.nextNight();
         corn.addDay();
         farmFactory.nextDay();
+        System.out.println("The farm has earned $" + bank.addToFarmCurrency() + " for the day.");
         farmFactory.nextNight();
         corn.addDay();
         System.out.println(corn.harvestCrop());
         farmFactory.nextDay();
+        System.out.println("The farm has earned $" + bank.addToFarmCurrency() + " for the day.");
         farmFactory.nextNight();
         corn.addDay();
         System.out.println(corn.harvestCrop());
