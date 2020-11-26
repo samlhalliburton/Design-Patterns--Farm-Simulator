@@ -118,7 +118,7 @@ public abstract class FarmFactory {
      * @param animal Animal
      */
     public int productionCurrency(Animal animal) {
-        if(animal.decorate().equals("An animal was created and has an affinity for production.")) {
+        if (animal.decorate().equals("An animal was created and has an affinity for production.")) {
             return totalCurrency += 200;
         } else {
             return totalCurrency;
@@ -131,7 +131,7 @@ public abstract class FarmFactory {
      * @param animal Animal
      */
     public int speedCurrency(Animal animal) {
-        if(animal.decorate().equals("An animal was created and has an affinity for speed.")) {
+        if (animal.decorate().equals("An animal was created and has an affinity for speed.")) {
             return totalCurrency += 150;
         } else {
             return totalCurrency;
@@ -144,7 +144,7 @@ public abstract class FarmFactory {
      * @param animal Animal
      */
     public int sizeCurrency(Animal animal) {
-        if(animal.decorate().equals("An animal was created and has an affinity for size.")) {
+        if (animal.decorate().equals("An animal was created and has an affinity for size.")) {
             return totalCurrency += 100;
         } else {
             return totalCurrency;

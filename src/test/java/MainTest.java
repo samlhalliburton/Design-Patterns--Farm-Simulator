@@ -1,6 +1,5 @@
 /**
  * MainTest.java
- * <p>
  * Tests for Main.java
  *
  * @author Samantha Halliburton
