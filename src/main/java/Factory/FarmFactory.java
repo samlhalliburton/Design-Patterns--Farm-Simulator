@@ -10,8 +10,6 @@
 package main.java.Factory;
 
 import main.java.Decorator.Animal;
-import main.java.Decorator.Crop;
-import main.java.Decorator.Farmer;
 
 /**
  * Base factory class for farms.
@@ -23,9 +21,6 @@ public abstract class FarmFactory {
     int nights = 0;
     boolean night = false;
     int totalCurrency = 0;
-    Animal animal;
-    Farmer farmer;
-    Crop crop;
 
     /**
      * constructFarm()
