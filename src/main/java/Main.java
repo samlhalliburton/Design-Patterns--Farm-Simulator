@@ -9,16 +9,8 @@
 
 package main.java;
 
-import main.java.Decorator.Animal;
-import main.java.Decorator.AnimalImpl;
-import main.java.Decorator.AnimalProduction;
-import main.java.Decorator.AnimalSize;
-import main.java.Decorator.AnimalSpeed;
-import main.java.Decorator.Farmer;
-import main.java.Decorator.FarmerGrowing;
-import main.java.Decorator.FarmerImpl;
-import main.java.Decorator.FarmerMoney;
-import main.java.Decorator.FarmerRearing;
+import main.java.Decorator.*;
+import main.java.Facade.Predator;
 import main.java.Factory.AnimalFarmFactory;
 import main.java.Factory.CropFarmFactory;
 import main.java.Factory.FarmFactory;
@@ -52,7 +44,29 @@ public class Main {
         runFarm();
         farmFactory.nextNight();
         farmFactory.nextDay();
+        farmFactory.nextNight();
+
+        //Testing full day counts: should output 2
         System.out.println("Total number of full days: " + farmFactory.getTotalCycles());
+
+        //Testing Wolf Predator attack() - only during nighttime
+        Predator wolf = new Predator("Wolf", true, false, farmFactory);
+        System.out.println(wolf.attack());
+
+        //Testing Wolf Predator eat()
+        System.out.println(wolf.eat());
+
+        //Testing Rabbit Predator eat() - only during nighttime
+        Predator rabbit = new Predator("Rabbit", false, true, farmFactory);
+        System.out.println(rabbit.eat());
+
+        farmFactory.nextDay();
+        farmFactory.nextNight();
+
+        //Testing Mole Predator damage() - only during nighttime
+        Predator mole = new Predator("Mole", false, false, farmFactory);
+        System.out.println(mole.damage());
+        System.out.println("Total number of full days: " + farmFactory.getTotalCycles()); // output should be 3
         System.out.println();
 
         //Testing Farm Factory (Factory Design Pattern) by creating Crop Farm
@@ -65,19 +79,18 @@ public class Main {
         runFarm();
         farmFactory.nextNight();
         farmFactory.nextDay();
-        farmFactory.nextNight();
+
+        //Testing full day counts: should output 1
         System.out.println("Total number of full days: " + farmFactory.getTotalCycles());
         System.out.println();
 
         //Testing Decorator Pattern with Farmer Rearing Affinity
         Farmer farmer1 = new FarmerRearing(new FarmerImpl());
         System.out.println(farmer1.decorate());
-        //System.out.println();
 
         //Testing Decorator Pattern with Farmer Growing Affinity
         Farmer farmer2 = new FarmerGrowing(new FarmerImpl());
         System.out.println(farmer2.decorate());
-        //System.out.println();
 
         //Testing Decorator Pattern with Farmer Money-Making Affinity
         Farmer farmer3 = new FarmerMoney(new FarmerImpl());
@@ -87,17 +100,16 @@ public class Main {
         //Testing Decorator Pattern with Animal Production Affinity
         Animal cow = new AnimalProduction(new AnimalImpl());
         System.out.println(cow.decorate());
-        //System.out.println();
 
         //Testing Decorator Pattern with Animal Speed Affinity
         Animal horse = new AnimalSpeed(new AnimalImpl());
         System.out.println(horse.decorate());
-        //System.out.println();
 
         //Testing Decorator Pattern with Animal Size Affinity
         Animal sheep = new AnimalSize(new AnimalImpl());
         System.out.println(sheep.decorate());
         System.out.println();
+
     }
 
 }

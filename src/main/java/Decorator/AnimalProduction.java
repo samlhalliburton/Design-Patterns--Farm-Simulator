@@ -1,6 +1,7 @@
 package main.java.Decorator;
 
 public class AnimalProduction extends AnimalDecorator {
+    int currency = 200;
 
     public AnimalProduction(Animal animal) {
         super(animal);

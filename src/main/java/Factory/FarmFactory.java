@@ -17,6 +17,8 @@ public abstract class FarmFactory {
     int totalCycles = 0;
     int days = 1;
     int nights = 0;
+    boolean night = false;
+    int totalCurrency = 0;
 
     /**
      * constructFarm()
@@ -45,6 +47,7 @@ public abstract class FarmFactory {
     public void nextDay() {
         if (nights == days) {
             days += 1;
+            night = false;
             System.out.println("Day " + days + ": It is now daytime.");
         } else {
             return;
@@ -58,6 +61,7 @@ public abstract class FarmFactory {
     public void nextNight() {
         if ((days - nights) == 1) {
             nights += 1;
+            night = true;
             System.out.println("Night " + nights + ": It is now nighttime.");
         } else if ((days - nights) != 1) {
             return;
@@ -77,6 +81,15 @@ public abstract class FarmFactory {
         }
 
         return totalCycles;
+    }
+
+    /**
+     * getNight()
+     * Returns the night boolean.
+     * @return boolean night
+     */
+    public boolean getNight() {
+        return night;
     }
 
 }
