@@ -10,6 +10,7 @@
 package main.java.Factory;
 
 import main.java.Decorator.Animal;
+import main.java.Decorator.Crop;
 import main.java.Decorator.Farmer;
 
 /**
@@ -24,6 +25,7 @@ public abstract class FarmFactory {
     int totalCurrency = 0;
     Animal animal;
     Farmer farmer;
+    Crop crop;
 
     /**
      * constructFarm()
@@ -104,6 +106,10 @@ public abstract class FarmFactory {
      */
     public int getTotalCurrency() {
         return totalCurrency;
+    }
+
+    public void setTotalCurrency(int totalCurrency) {
+        this.totalCurrency = totalCurrency;
     }
 
     /**
