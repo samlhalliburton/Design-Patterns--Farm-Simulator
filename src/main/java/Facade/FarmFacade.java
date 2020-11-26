@@ -37,7 +37,7 @@ public class FarmFacade {
 
     /**
      * farmFacade()
-     * Implements Facade Design Pattern
+     * Implements Facade Design Pattern.
      */
     public void farmFacade() {
         //Testing Farm Factory (Factory Design Pattern) by creating Animal Farm
