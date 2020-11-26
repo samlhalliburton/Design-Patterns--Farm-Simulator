@@ -1,20 +1,15 @@
 package main.java.Decorator;
 
-import main.java.Factory.FarmFactory;
-
 public class Crop {
     public String name;
     public int harvestTime;
-    public FarmFactory farmFactory;
 
     /**
      * Crop constructor method.
      * @param name Crop name
-     * @param farmFactory farmFactory
      */
-    public Crop(String name, FarmFactory farmFactory) {
+    public Crop(String name) {
         this.name = name;
-        this.farmFactory = farmFactory;
         this.harvestTime = 1;
     }
 

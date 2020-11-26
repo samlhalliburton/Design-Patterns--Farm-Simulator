@@ -89,7 +89,7 @@ public class Main {
         runFarm();
 
         //Testing crop
-        Crop corn = new Crop("Corn", farmFactory);
+        Crop corn = new Crop("Corn");
         farmFactory.nextNight();
         corn.addDay();
         farmFactory.nextDay();
