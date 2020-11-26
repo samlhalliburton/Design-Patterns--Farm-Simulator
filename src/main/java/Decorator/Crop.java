@@ -27,8 +27,7 @@ public class Crop {
         if (harvestTime % 2 == 0) {
             harvestTime = 0;
             return "The crop " + name + " can be harvested now.";
-        }
-        else {
+        } else {
             return "The crop " + name + " is not ready to be harvested.";
         }
     }

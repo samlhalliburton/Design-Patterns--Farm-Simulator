@@ -75,7 +75,8 @@ public class Main {
         //Testing Mole Predator damage() - only during nighttime
         Predator mole = new Predator("Mole", false, false, farmFactory);
         System.out.println(mole.damage());
-        System.out.println("Total number of full days: " + farmFactory.getTotalCycles()); // output should be 3
+        System.out.println("Total number of full days: " + farmFactory.getTotalCycles());
+        // output should be 3
         System.out.println();
 
         //Testing Farm Factory (Factory Design Pattern) by creating Crop Farm
