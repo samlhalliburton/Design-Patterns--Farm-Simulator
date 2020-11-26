@@ -101,6 +101,8 @@ public class Main {
         farmFactory.nextNight();
         corn.addDay();
         wool.addDay();
+        System.out.println(corn.harvestCrop());
+        System.out.println(wool.harvestAnimalProduct());
         farmFactory.nextDay();
         System.out.println("The farm has earned $" + bank.addToFarmCurrency() + " for the day.");
         farmFactory.nextNight();
@@ -113,6 +115,13 @@ public class Main {
         farmFactory.nextNight();
         corn.addDay();
         System.out.println(corn.harvestCrop());
+        System.out.println(wool.harvestAnimalProduct());
+        farmFactory.nextDay();
+        System.out.println("The farm has earned $" + bank.addToFarmCurrency() + " for the day.");
+        farmFactory.nextNight();
+        corn.addDay();
+        System.out.println(corn.harvestCrop());
+        System.out.println(wool.harvestAnimalProduct());
 
         //Testing full day counts: should output 3
         System.out.println("Total number of full days: " + farmFactory.getTotalCycles());

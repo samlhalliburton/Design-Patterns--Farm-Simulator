@@ -19,7 +19,7 @@ public class Crop {
      * @return String statement
      */
     public String harvestCrop() {
-        if (harvestTime % 2 == 0) {
+        if (harvestTime % 3 == 0) {
             harvestTime = 0;
             return "The crop " + name + " can be harvested now.";
         } else {
