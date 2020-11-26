@@ -8,7 +8,17 @@
 
 package main.java;
 
-import main.java.Decorator.*;
+import main.java.Decorator.Animal;
+import main.java.Decorator.AnimalImpl;
+import main.java.Decorator.AnimalProduction;
+import main.java.Decorator.AnimalSize;
+import main.java.Decorator.AnimalSpeed;
+import main.java.Decorator.Crop;
+import main.java.Decorator.Farmer;
+import main.java.Decorator.FarmerGrowing;
+import main.java.Decorator.FarmerImpl;
+import main.java.Decorator.FarmerMoney;
+import main.java.Decorator.FarmerRearing;
 import main.java.Facade.AnimalProduct;
 import main.java.Facade.Bank;
 import main.java.Facade.Predator;
